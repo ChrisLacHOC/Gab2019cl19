@@ -1,0 +1,10 @@
+'C:\Program Files\dotnet\dotnet.exe' new mvc -o GABDemo
+
+
+
+az.cmd login
+az.cmd group create --name gabdemogroupcl19 --location eastus
+
+az.cmd appservice plan create --name gabdemoplancl19 --resource-group gabdemogroupcl19 --sku FREE
+
+az.cmd webapp create --name gabdemocl19 --resource-group gabdemogroupcl19 --plan gabdemoplancl19
